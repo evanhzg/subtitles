@@ -19,7 +19,7 @@ namespace SousTitresProj
         public TimeSpan curTime = new TimeSpan();
         public TimeSpan nextSub = new TimeSpan();
         public TimeSpan beforeNext = new TimeSpan();
-        public UTF8Encoding utf8 = new UTF8Encoding();
+        public int premierSoustitre = 1;
         public int compDatesStart = 0;
         public int compDatesEnd = 0;
         public int endOfSub = 0;
@@ -58,6 +58,10 @@ namespace SousTitresProj
                         subtitleEnd = DateTime.Parse(subtitleEndStr);
                         subLength = subtitleEnd - subtitleStart;
                         sw.WriteLine(subtitleStartStr + " - " + subtitleEndStr);
+                        if (premierSoustitre == 1)
+                        {
+                            subLength = subtitleStart - defaultTime;
+                        }
                         continue;
                     }
                     // Tant que la ligne n'est pas vide (soit la ligne qui suit les sous-titres),
@@ -65,7 +69,13 @@ namespace SousTitresProj
                     // ainsi que les timecode de début et de fin.
                     else if (l.Length >= 4)
                     {
+                        if (premierSousTitre == 1)
+                        {
+                            System.Threading.Thread.Sleep(subLength);
+                            premierSoustitre = 0;
 
+                            subLength = subtitleEnd - subtitleStart;
+                        }
                         sw.WriteLine(l);
                         Console.WriteLine(l);
                         System.Threading.Thread.Sleep(subLength);
