@@ -1,0 +1,42 @@
+1
+00:00:12,928 --> 00:00:14,472
+TERRE-203
+
+2
+00:00:18,976 --> 00:00:20,436
+Oracle, ici la Chasseresse. Réponds.
+
+3
+00:00:20,519 --> 00:00:22,021
+Les communications sont perturbées.
+
+4
+00:00:22,104 --> 00:00:23,064
+Barbara, tu m'entends ?
+
+5
+00:00:23,147 --> 00:00:24,023
+Il me faut plus de temps.
+
+6
+00:00:24,106 --> 00:00:26,442
+La vague arrive trop vite.
+Il faut évacuer immédiatement.
+
+7
+00:00:26,525 --> 00:00:28,611
+J'envoie les données nécessaires à Alfred.
+
+8
+00:00:29,779 --> 00:00:32,490
+Oracle. Réponds-moi, s'il te plaît.
+
+9
+00:00:32,573 --> 00:00:34,700
+J'envoie les données...
+
+10
+00:00:50,216 --> 00:00:51,759
+TERRE-1
+
+

@@ -10,16 +10,21 @@ namespace SousTitresProj
     public class Srt
     {
         public DateTime defaultTime = DateTime.Now;
-        public DateTime curTimecode = DateTime.Now;
+        public DateTime curTimecode = new DateTime();
         public DateTime subtitleStart = new DateTime();
         public DateTime subtitleEnd = new DateTime();
         public DateTime startSub = new DateTime();
         public DateTime endSub = new DateTime();
+        public TimeSpan subLength = new TimeSpan();
         public TimeSpan curTime = new TimeSpan();
+        public TimeSpan nextSub = new TimeSpan();
         public TimeSpan beforeNext = new TimeSpan();
-        public int compDates = 0;
+        public UTF8Encoding utf8 = new UTF8Encoding();
+        public int compDatesStart = 0;
+        public int compDatesEnd = 0;
         public int endOfSub = 0;
         public int shown = 0;
+        public string format = "HH:mm:ss,fff";
 
         public async Task Stream()
         {
@@ -51,6 +56,8 @@ namespace SousTitresProj
 
                         subtitleStart = DateTime.Parse(subtitleStartStr);
                         subtitleEnd = DateTime.Parse(subtitleEndStr);
+                        subLength = subtitleEnd - subtitleStart;
+                        sw.WriteLine(subtitleStartStr + " - " + subtitleEndStr);
                         continue;
                     }
                     // Tant que la ligne n'est pas vide (soit la ligne qui suit les sous-titres),
@@ -58,27 +65,16 @@ namespace SousTitresProj
                     // ainsi que les timecode de début et de fin.
                     else if (l.Length >= 4)
                     {
-                        while (compDates < 0)
-                            await Task.Delay(10000);
 
-                        if (compDates >= 0)
-                        {
-                            if (shown == 0)
-                            {
-                                Console.WriteLine(l);
-                                sw.WriteLine(l);
-                                sr.ReadLine();
-                                shown = 1;
-                                continue;
-                            }
-                            else
-                            {
-                                Console.Clear();
-                            }
-                        }
+                        sw.WriteLine(l);
+                        Console.WriteLine(l);
+                        System.Threading.Thread.Sleep(subLength);
+                        Console.Clear();
                     }
                     else
+                    {
                         continue;
+                    }
                 }
                 endOfSub = 1;
             }
@@ -94,10 +90,8 @@ namespace SousTitresProj
                 await Task.Delay(1);
                 curTimecode = DateTime.Now;
                 curTimeStr = curTimecode.ToString("HH:mm:ss.fff");
-                if (shown == 0)
-                    compDates = curTime.CompareTo(subtitleStart);
-                else
-                    compDates = curTime.CompareTo(subtitleEnd);
+                compDatesStart = curTime.CompareTo(subtitleStart);
+                compDatesEnd = curTime.CompareTo(subtitleEnd);
             }
         }
     }
