@@ -1,0 +1,13 @@
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\obj\Debug\netcoreapp3.1\SousTitresProj.csprojAssemblyReference.cache
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\obj\Debug\netcoreapp3.1\SousTitresProj.AssemblyInfoInputs.cache
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\obj\Debug\netcoreapp3.1\SousTitresProj.AssemblyInfo.cs
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\obj\Debug\netcoreapp3.1\SousTitresProj.csproj.CoreCompileInputs.cache
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\bin\Debug\netcoreapp3.1\SousTitresProj.exe
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\bin\Debug\netcoreapp3.1\SousTitresProj.deps.json
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\bin\Debug\netcoreapp3.1\SousTitresProj.runtimeconfig.json
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\bin\Debug\netcoreapp3.1\SousTitresProj.runtimeconfig.dev.json
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\bin\Debug\netcoreapp3.1\SousTitresProj.dll
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\bin\Debug\netcoreapp3.1\SousTitresProj.pdb
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\obj\Debug\netcoreapp3.1\SousTitresProj.dll
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\obj\Debug\netcoreapp3.1\SousTitresProj.pdb
+C:\Users\Evan Hoizey\source\repos\SousTitresProj\SousTitresProj\obj\Debug\netcoreapp3.1\SousTitresProj.genruntimeconfig.cache

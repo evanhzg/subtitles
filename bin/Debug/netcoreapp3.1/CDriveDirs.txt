@@ -1,0 +1,10 @@
+$Recycle.Bin
+Documents and Settings
+PerfLogs
+Program Files
+Program Files (x86)
+ProgramData
+Recovery
+System Volume Information
+Users
+Windows
